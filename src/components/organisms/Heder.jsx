@@ -10,22 +10,39 @@ export const Heder = memo(() => {
         alignItems="center"
         borderBottom="1px"
         borderColor="gray.400"
-        // _hover={{
-        //   background: "#6C5D36",
-        //   opacity: 0.8,
-        // }}
+        bgColor={"#f2f0eb"}
+        opacity={"0.8"}
+        _hover={{
+          opacity: 1.0,
+        }}
       >
         <Box>
           <Link to="/">
-            <Text fontSize="4xl">サイト名</Text>
+            <Text
+              fontSize={{ base: "lg", md: "4xl" }}
+              fontWeight="bold"
+              textShadow={"0px 0px 2px white"}
+            >
+              サイト名
+            </Text>
           </Link>
         </Box>
         <Box display="flex" m={"0px 15px"}>
-          <Link to="/Congestion" style={{ marginRight: "10vh" }}>
-            <Text fontSize="3xl">混雑状況</Text>
+          <Link to="/Congestion" style={{ marginRight: "10vw" }}>
+            <Text
+              fontSize={{ base: "md", md: "3xl" }}
+              textShadow={"0px 0px 2px white"}
+            >
+              混雑状況
+            </Text>
           </Link>
           <Link to="/menu">
-            <Text fontSize="3xl">メニュー</Text>
+            <Text
+              fontSize={{ base: "md", md: "3xl" }}
+              textShadow={"0px 0px 2px white"}
+            >
+              メニュー
+            </Text>
           </Link>
         </Box>
       </Flex>

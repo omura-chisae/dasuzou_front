@@ -1,4 +1,4 @@
-import { Box, HStack, Text } from "@chakra-ui/react";
+import { Box, Flex, HStack, Stack, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { Heder } from "../organisms/Heder";
 import image from "../../images/mainVisual.jpeg";
@@ -8,7 +8,7 @@ export const TopPage = memo(() => {
   return (
     <Box>
       <Box
-        height="70vh"
+        height="60vh"
         bgImage={image}
         bgRepeat="no-repeat"
         bgSize="cover"
@@ -18,17 +18,40 @@ export const TopPage = memo(() => {
         {/* ../../images/mainVisual.jpeg */}
         {/* メインビジュアル */}
         <Box ml={5} mt="15vh">
-          <Text fontSize="5xl" bg="gray" width="fit-content">
+          <Text
+            fontSize={{ base: "3xl", md: "5xl" }}
+            bg="gray"
+            width="fit-content"
+          >
             サイトのキャッチコピー
           </Text>
-          <Text fontSize="sm" width="fit-content" color={"white"}>
+          <Text
+            fontSize={{ base: "sm", md: "md" }}
+            width="fit-content"
+            color={"white"}
+          >
             サイトの説明
           </Text>
         </Box>
       </Box>
+      <Flex
+        height={"15vh"}
+        borderColor="black"
+        borderWidth={"1px"}
+        borderRadius={"15px"}
+        justifyContent="space-evenly"
+        alignItems="center"
+      >
+        <Text fontSize={{ base: "sm", md: "lg" }} textAlign="center">
+          最短での提供　待ち時間3分
+        </Text>
+        <Text fontSize={{ base: "sm", md: "lg" }} textAlign="center">
+          カレー、カツカレー
+        </Text>
+      </Flex>
 
       {/* リンク群 */}
-      <HStack justify="space-around" height="30vh">
+      <HStack justify="space-around" height="25vh">
         <Box width="50%" borderRight="2px">
           <Link to="/congestion">
             <Text fontSize="3xl" textAlign="center">
