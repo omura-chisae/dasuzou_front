@@ -1,13 +1,4 @@
-import {
-  Box,
-  Flex,
-  HStack,
-  Image,
-  Stack,
-  Text,
-  Wrap,
-  WrapItem,
-} from "@chakra-ui/react";
+import { Box, Stack, Text, Wrap, WrapItem } from "@chakra-ui/react";
 import { memo } from "react";
 
 export const CongestionCard = memo((props) => {

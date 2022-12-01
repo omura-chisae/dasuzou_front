@@ -1,8 +1,13 @@
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import { memo } from "react";
+import image from "../../images/menu/abura/abura.jpg";
+import { Images } from "../Images";
 
 export const MenuCard = memo((props) => {
-  const { name, cost } = props;
+  const { name, cost, pic } = props;
+  const images = Images;
+  console.log(images);
+  console.log(image);
   return (
     <Box>
       <Flex
@@ -17,7 +22,7 @@ export const MenuCard = memo((props) => {
         shadow={"md"}
       >
         <Image
-          src="https://illustimage.com/photo/dl/401.png?20160705"
+          src={images[0]}
           h={"90%"}
           border={"1px"}
           borderColor={"gray.500"}
