@@ -1,13 +1,48 @@
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import { memo } from "react";
-import image from "../../images/menu/abura/abura.jpg";
-import { Images } from "../Images";
+import curry from "../../images/menu/curry/curry.jpg";
+import katuCurry from "../../images/menu/curry/katsu_curry.jpg";
+import katu from "../../images/menu/katsuA/katsu-don.jpg";
+import teishokuA from "../../images/menu/katsuA/A.jpeg";
+import teishokuB from "../../images/menu/BCfish/B.jpeg";
+import teishokuC from "../../images/menu/BCfish/C.jpeg";
+import fish from "../../images/menu/BCfish/fish.jpeg";
+import sagamihara from "../../images/menu/BCfish/sagami.jpeg";
+import ramen from "../../images/menu/ra-men/ra-men.jpg";
+import chashu from "../../images/menu/ra-men/chashu_men.jpg";
+import ramenFair from "../../images/menu/ra-men/ra-men_fair.jpg";
+import abura from "../../images/menu/abura/abura.jpg";
+import aburaSet from "../../images/menu/abura/abura-set.jpg";
+import udon from "../../images/menu/udon_soba/udon.jpg";
+import soba from "../../images/menu/udon_soba/soba.jpg";
+import weeklyUdon from "../../images/menu/udon_soba/weekly_udon.jpg";
+import weeklySoba from "../../images/menu/udon_soba/weekly_soba.jpg";
 
 export const MenuCard = memo((props) => {
-  const { name, cost, pic } = props;
-  const images = Images;
-  console.log(images);
-  console.log(image);
+  const { name, cost, index } = props;
+  const images = [
+    curry,
+    katuCurry,
+    katu,
+    teishokuA,
+    teishokuB,
+    teishokuC,
+    fish,
+    sagamihara,
+    abura,
+    aburaSet,
+    ramen,
+    chashu,
+    ramenFair,
+    ramen,
+    udon,
+    soba,
+    udon,
+    soba,
+    weeklyUdon,
+    weeklySoba,
+  ];
+
   return (
     <Box>
       <Flex
@@ -22,7 +57,7 @@ export const MenuCard = memo((props) => {
         shadow={"md"}
       >
         <Image
-          src={images[0]}
+          src={images[index]}
           h={"90%"}
           border={"1px"}
           borderColor={"gray.500"}

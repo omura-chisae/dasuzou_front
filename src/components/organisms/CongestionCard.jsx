@@ -1,8 +1,16 @@
-import { Box, Stack, Text, Wrap, WrapItem } from "@chakra-ui/react";
+import { Box, Image, Stack, Text, Wrap, WrapItem } from "@chakra-ui/react";
 import { memo } from "react";
+import curry from "../../images/menu/curry/curry.jpg";
+import katu from "../../images/menu/katsuA/katsu-don.jpg";
+import teishokuB from "../../images/menu/BCfish/B.jpeg";
+import abura from "../../images/menu/abura/abura.jpg";
+
+import ramen from "../../images/menu/ra-men/ra-men.jpg";
+import udon from "../../images/menu/udon_soba/udon.jpg";
 
 export const CongestionCard = memo((props) => {
-  const { picture, menu, time } = props;
+  const { index, menu, time } = props;
+  const images = [curry, katu, teishokuB, abura, ramen, udon];
   return (
     <>
       <Box alignItems="center" mb={5}>
@@ -18,13 +26,13 @@ export const CongestionCard = memo((props) => {
           shadow={"md"}
           justifyContent="space-evenly"
         >
-          {/* <Image
-            objectFit={"cover"}
-            boxSize={"100%"}
-            src={picture}
-            width={"90px"}
-            height={"90px"}
-          /> */}
+          <Image
+            src={images[index]}
+            h={"90%"}
+            border={"1px"}
+            borderColor={"gray.500"}
+            borderRadius="5px"
+          />
           <Box w={"100%"} alignItems="center">
             <Stack
               h={"50%"}
@@ -33,6 +41,7 @@ export const CongestionCard = memo((props) => {
               justifyContent="space-between"
             >
               <Text
+                width={"120px"}
                 fontWeight={600}
                 color={"black.500"}
                 fontSize={{ base: "md", md: "3xl" }}
