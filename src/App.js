@@ -5,9 +5,11 @@ import { Congestion } from "./components/pages/Congestion";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./index.css";
+import { WaitingTimeProvider } from "./context/WaitingTimeContext";
 
 function App() {
   return (
+    <WaitingTimeProvider>
     <ChakraProvider
       theme={extendTheme({
         styles: {
@@ -31,6 +33,7 @@ function App() {
         </div>
       </BrowserRouter>
     </ChakraProvider>
+    </WaitingTimeProvider>
   );
 }
 
