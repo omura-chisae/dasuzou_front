@@ -5,35 +5,38 @@ import { Congestion } from "./components/pages/Congestion";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./index.css";
-import { WaitingTimeProvider } from "./context/WaitingTimeContext";
+import { Provider } from "react-redux";
+import {store} from "./redux/store"; 
 
 function App() {
   return (
-    <WaitingTimeProvider>
-    <ChakraProvider
-      theme={extendTheme({
-        styles: {
-          global: {
-            body: {
-              backgroundColor: "#f2f0eb",
-              color: "gray.800",
-              margin: { base: "0 5px", md: "0 15px" },
+    <Provider store={store} >
+        <ChakraProvider
+          theme={extendTheme({
+            styles: {
+              global: {
+                body: {
+                  width: 1280,
+                  backgroundColor: "#f2f0eb",
+                  color: "gray.800",
+                  // margin: { base: "0 5px", md: "0 15px" },
+                  margin: "auto",
+                },
+              },
             },
-          },
-        },
-      })}
-    >
-      <BrowserRouter>
-        <div className="App">
-          <Routes>
-            <Route path="/" element={<TopPage />} />
-            <Route path="/menu" element={<MenuPage />} />
-            <Route path="/congestion" element={<Congestion />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
-    </ChakraProvider>
-    </WaitingTimeProvider>
+          })}
+        >
+          <BrowserRouter>
+            <div className="App">
+              <Routes>
+                <Route path="/" element={<TopPage />} />
+                <Route path="/menu" element={<MenuPage />} />
+                <Route path="/congestion" element={<Congestion />} />
+              </Routes>
+            </div>
+          </BrowserRouter>
+        </ChakraProvider>
+    </Provider>
   );
 }
 

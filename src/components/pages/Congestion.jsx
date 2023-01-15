@@ -1,16 +1,23 @@
-import { Box } from "@chakra-ui/react";
-import { useContext, useEffect } from "react";
+import { Box, Text } from "@chakra-ui/react";
+import { useEffect } from "react";
 import { memo } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
-import { WaitingTimeContext } from "../../context/WaitingTimeContext";
+import { fetchWatingTimes } from "../../redux/watingTimeSlice";
 import { CongestionCard } from "../organisms/CongestionCard";
 import { Heder } from "../organisms/Heder";
+import { LoadingSpinner } from "../organisms/LoadingSpinner";
 
 export const Congestion = memo(() => {
   const {state} = useLocation();
-  // const waitingTime = state.waitTimes;
-  const {waitTimes} = useContext(WaitingTimeContext);
+  const dispatch = useDispatch();
+  const times = useSelector((state)=> state.waitingTimes.data);
+  const loading = useSelector((state)=> state.waitingTimes.status);
+  const error = useSelector((state)=> state.waitingTimes.error);
 
+  useEffect(() => {
+    dispatch(fetchWatingTimes()).catch((error)=> console.log(error));
+  }, []);
   const menuAffiliation = [
     ["curry",["カレー", "カツカレー", "カレーライスセット", "カツカレーライスセット"]],
     ["teishoku",["かつ丼", "特定食A"]],
@@ -32,14 +39,19 @@ export const Congestion = memo(() => {
       <Heder bgColor={"#f2A444"} />
       <Box p={"0 10px"} height={"90vh"}>
         <Box padding={"10px 2%"} align="center">
-          {menuAffiliation.map((menu, index) =>(
-            <CongestionCard
-              menu={menu[1]}
-              time={waitTimes[menu[0]] ? Number(waitTimes[menu[0]]) : "-"}
-              index={index}
-              key={index}
-            />
-          ))}
+          {loading != "succeeded"
+          ? <LoadingSpinner />
+          : ( error != undefined
+            ? <Text>エラーが発生しました。</Text>
+            :menuAffiliation.map((menu, index) =>{
+            return (
+              <CongestionCard
+                menu={menu[1]}
+                time={times[menu[0]] != undefined ? Math.ceil(Number(times[menu[0]])) : "-"}
+                index={index}
+                key={index}
+              />
+            )}))}
         </Box>
       </Box>
     </>

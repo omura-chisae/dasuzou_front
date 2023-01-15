@@ -71,7 +71,7 @@ export const CongestionCard = memo((props) => {
                 color={"black.500"}
                 fontSize={{ base: "md", md: "3xl" }}
               >
-                待ち時間　
+                待ち時間
               </Text>
               <Text
                 fontSize={{ base: "md", md: "2xl" }}

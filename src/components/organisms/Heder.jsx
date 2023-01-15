@@ -23,7 +23,7 @@ export const Heder = memo(() => {
               fontWeight="bold"
               textShadow={"0px 0px 2px white"}
             >
-              サイト名
+              ホーム
             </Text>
           </Link>
         </Box>
