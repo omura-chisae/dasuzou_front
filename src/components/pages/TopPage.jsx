@@ -90,7 +90,7 @@ export const TopPage = memo(() => {
       {/* リンク群 */}
       <HStack justify="space-around" height="25vh">
         <Box width="50%" borderRight="2px">
-          <Link to="./congestion">
+          <Link to="congestion">
             <Text fontSize="3xl" textAlign="center">
               混雑状況
             </Text>
