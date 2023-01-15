@@ -8,8 +8,6 @@ import "./index.css";
 import { Provider } from "react-redux";
 import {store} from "./redux/store"; 
 
-const rootName = "dasuzou_front";
-
 function App() {
   return (
     <Provider store={store} >
@@ -28,12 +26,12 @@ function App() {
             },
           })}
         >
-          <BrowserRouter>
+          <BrowserRouter basename={process.env.PUBLIC_URL}>
             <div className="App">
               <Routes>
-                <Route path={rootName+ "/"} element={<TopPage />} />
-                <Route path={rootName+"/menu"} element={<MenuPage />} />
-                <Route path={rootName+"/congestion"} element={<Congestion />} />
+                <Route path="/" element={<TopPage />} />
+                <Route path="/menu" element={<MenuPage />} />
+                <Route path="/congestion" element={<Congestion />} />
               </Routes>
             </div>
           </BrowserRouter>
