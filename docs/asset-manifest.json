@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/dasuzou_front/static/css/main.31d6cfe0.css",
+    "main.js": "/dasuzou_front/static/js/main.49137194.js",
+    "static/js/787.71df535f.chunk.js": "/dasuzou_front/static/js/787.71df535f.chunk.js",
+    "static/media/mainVisual.jpeg": "/dasuzou_front/static/media/mainVisual.6677b45ef2bd0f71ba0b.jpeg",
+    "static/media/A.jpeg": "/dasuzou_front/static/media/A.9e138b390d49a077ce97.jpeg",
+    "static/media/fish.jpeg": "/dasuzou_front/static/media/fish.c97aee65985cb25f8199.jpeg",
+    "static/media/sagami.jpeg": "/dasuzou_front/static/media/sagami.817ee470626abc32a310.jpeg",
+    "static/media/C.jpeg": "/dasuzou_front/static/media/C.b934468c51792f9c2676.jpeg",
+    "static/media/ra-men_fair.jpg": "/dasuzou_front/static/media/ra-men_fair.c20c97cf14e794a199fa.jpg",
+    "static/media/B.jpeg": "/dasuzou_front/static/media/B.cbf12f57380bfd2f9321.jpeg",
+    "static/media/abura-set.jpg": "/dasuzou_front/static/media/abura-set.4d36818bbfafb683b62f.jpg",
+    "static/media/weekly_soba.jpg": "/dasuzou_front/static/media/weekly_soba.8ccb175bf49c3a088867.jpg",
+    "static/media/chashu_men.jpg": "/dasuzou_front/static/media/chashu_men.d7ebb991c6f6857bdac9.jpg",
+    "static/media/katsu_curry.jpg": "/dasuzou_front/static/media/katsu_curry.191d75bf83e5a32f5b72.jpg",
+    "static/media/katsu-don.jpg": "/dasuzou_front/static/media/katsu-don.52a5e689dd7d176fb03b.jpg",
+    "static/media/weekly_udon.jpg": "/dasuzou_front/static/media/weekly_udon.065fb6d58aaaf870acb3.jpg",
+    "static/media/soba.jpg": "/dasuzou_front/static/media/soba.9b090f870bd2ebafe4ba.jpg",
+    "static/media/curry.jpg": "/dasuzou_front/static/media/curry.daa53a412063b88c8872.jpg",
+    "static/media/abura.jpg": "/dasuzou_front/static/media/abura.b2ece6d054c94efae376.jpg",
+    "static/media/ra-men.jpg": "/dasuzou_front/static/media/ra-men.0223732a7fb3537c8bbb.jpg",
+    "static/media/udon.jpg": "/dasuzou_front/static/media/udon.02964e0518153ccef2f4.jpg",
+    "index.html": "/dasuzou_front/index.html",
+    "main.49137194.js.map": "/dasuzou_front/static/js/main.49137194.js.map",
+    "787.71df535f.chunk.js.map": "/dasuzou_front/static/js/787.71df535f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.49137194.js"
+  ]
+}

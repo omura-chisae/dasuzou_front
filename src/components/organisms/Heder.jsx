@@ -17,18 +17,18 @@ export const Heder = memo(() => {
         }}
       >
         <Box>
-          <Link to="/">
+          <Link to="../">
             <Text
               fontSize={{ base: "lg", md: "4xl" }}
               fontWeight="bold"
               textShadow={"0px 0px 2px white"}
             >
-              サイト名
+              ホーム
             </Text>
           </Link>
         </Box>
         <Box display="flex" m={"0px 15px"}>
-          <Link to="/Congestion" style={{ marginRight: "10vw" }}>
+          <Link to="../Congestion" style={{ marginRight: "10vw" }}>
             <Text
               fontSize={{ base: "md", md: "3xl" }}
               textShadow={"0px 0px 2px white"}
@@ -36,7 +36,7 @@ export const Heder = memo(() => {
               混雑状況
             </Text>
           </Link>
-          <Link to="/menu">
+          <Link to="../menu">
             <Text
               fontSize={{ base: "md", md: "3xl" }}
               textShadow={"0px 0px 2px white"}
